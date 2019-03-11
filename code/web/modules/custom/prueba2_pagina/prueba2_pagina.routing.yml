@@ -37,3 +37,14 @@ prueba2.hola_users:
        type: entity:user
      user2:
        type: entity:user
+
+prueba2.policeman:
+  path: '/policeman/{policeman}'
+  defaults:
+    _controller: \Drupal\prueba2_pagina\Controller\PolicemanController::view
+  requirements:
+    _access: 'TRUE'
+  options:
+    parameters:
+      policeman:
+        type: policeman
